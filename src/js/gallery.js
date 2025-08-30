@@ -17,7 +17,7 @@ export function cargarGaleria() {
           data-fecha="${item.createdAt}">
           ${
             item.src.type === "image"
-              ? `<img src="${item.src.jpg}" alt="${item.title}" width="${item.width}" height="${item.height}" loading="lazy">`
+              ? `<img src="${item.src.webp}" alt="${item.title}" width="${item.width}" height="${item.height}" loading="lazy">`
               : `<video autoplay muted loop playsinline
                      poster="${item.src.poster || ""}">
                    <source src="${item.src.mp4}" type="video/mp4">
