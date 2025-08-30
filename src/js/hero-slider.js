@@ -3,6 +3,7 @@ let slides, puntos, indice = 0;
 function mostrarSlide(n) {
   slides.forEach((s, i) => {
     const video = s.querySelector("video");
+
     if (i === n) {
       s.classList.add("activo");
       if (video) {
@@ -16,10 +17,12 @@ function mostrarSlide(n) {
         video.currentTime = 0;
       }
     }
+
     if (puntos && puntos[i]) {
-      puntos[i].setAttribute("aria-current", i === n ? "true" : "false");
+      puntos[i].setAttribute("aria-selected", i === n ? "true" : "false");
     }
   });
+
   indice = n;
 }
 
@@ -39,23 +42,23 @@ export function initHeroSlider() {
 
   if (!slides.length || !puntosContainer) return;
 
-  // bullets
   puntosContainer.innerHTML = "";
   slides.forEach((_, i) => {
     const btn = document.createElement("button");
+    btn.setAttribute("role", "tab"); 
     btn.setAttribute("aria-label", `Ir a la diapositiva ${i + 1}`);
-    if (i === 0) btn.setAttribute("aria-current", "true");
+    btn.setAttribute("aria-selected", i === 0 ? "true" : "false");
     puntosContainer.appendChild(btn);
     btn.addEventListener("click", () => mostrarSlide(i));
   });
 
   puntos = puntosContainer.querySelectorAll("button");
 
-  // flechas
+  // Flechas
   btnNext.addEventListener("click", siguiente);
   btnPrev.addEventListener("click", anterior);
 
-  // Evento para pasar al siguiente slide cuando un video termina
+  //siguiente slide cuando un vídeo termina
   slides.forEach((s) => {
     const video = s.querySelector("video");
     if (video) {

@@ -110,7 +110,7 @@
       cursor: pointer;
       transition: background 0.3s;
 
-      &[aria-current="true"] {
+      &[aria-selected="true"] {
         background: $color-principal;
       }
     }
