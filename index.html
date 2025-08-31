@@ -14,6 +14,12 @@
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
+    <link
+      rel="preload"
+      as="image"
+      href="/img/hero-slider/vp-2-small(1).jpg"
+      fetchpriority="high"
+    />
   </head>
   <body>
     <!-- #region header-nav -->
@@ -199,6 +205,6 @@
       </div>
     </footer>
     <!-- #endregion footer -->
-    <script type="module" src="/src/main.js"></script>
+    <script type="module" src="/src/main.js" defer></script>
   </body>
 </html>
