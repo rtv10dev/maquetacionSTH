@@ -31,20 +31,24 @@ export function cargarGaleria() {
               </figure>
             `;
           } else {
-            return `
-              <figure class="item"
-                data-categoria="${item.category}"
-                data-etiquetas="${item.tags.join(",")}"
-                data-vistas="${item.views}"
-                data-fecha="${item.createdAt}">
-                
-                <video autoplay muted loop playsinline poster="${item.src.poster || ""}">
-                  <source src="${item.src.mp4}" type="video/mp4">
-                </video>
-                
-                <figcaption>${item.title}</figcaption>
-              </figure>
-            `;
+           return `
+  <figure class="item"
+    data-categoria="${item.category}"
+    data-etiquetas="${item.tags.join(",")}"
+    data-vistas="${item.views}"
+    data-fecha="${item.createdAt}">
+    
+    <video autoplay muted loop playsinline poster="${item.src.poster || ""}">
+      <!-- Versión móvil -->
+      <source src="${item.src.small}" type="video/mp4" media="(max-width: 768px)">
+      <!-- Versión escritorio -->
+      <source src="${item.src.mp4}" type="video/mp4" media="(min-width: 769px)">
+      Tu navegador no soporta el video.
+    </video>
+    
+    <figcaption>${item.title}</figcaption>
+  </figure>
+`;
           }
         })
         .join("");
