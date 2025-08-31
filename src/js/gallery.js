@@ -1,4 +1,4 @@
-//Función que carga la galería desde el JSON y genera HTML
+// Función que carga la galería desde el JSON y genera HTML
 export function cargarGaleria() {
   const grid = document.getElementById("galeria-json");
   if (!grid) return;
@@ -16,17 +16,15 @@ export function cargarGaleria() {
                 data-vistas="${item.views}"
                 data-fecha="${item.createdAt}">
                 
-                <picture>
-                  <!--pantallas<= 768px-->
-                  <source srcset="${item.src.small}" media="(max-width: 768px)">
-                  <img 
-                    src="${item.src.large}" 
-                    alt="${item.title}" 
-                    width="${item.width}" 
-                    height="${item.height}" 
-                    loading="lazy">
-                </picture>
-
+                <img 
+                  src="${item.src.jpg}" 
+                  srcset="${item.src.small} 600w, ${item.src.jpg} 1200w"
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  alt="${item.title}" 
+                  width="${item.width}" 
+                  height="${item.height}" 
+                  loading="lazy">
+                
                 <figcaption>${item.title}</figcaption>
               </figure>
             `;
