@@ -31,27 +31,44 @@ export function cargarGaleria() {
               </figure>
             `;
           } else {
-           return `
+return `
   <figure class="item"
     data-categoria="${item.category}"
     data-etiquetas="${item.tags.join(",")}"
     data-vistas="${item.views}"
     data-fecha="${item.createdAt}">
     
-    <video autoplay muted loop playsinline poster="${item.src.poster || ""}">
-      <!-- Versión móvil -->
+    <video
+      muted loop playsinline
+      preload="none"
+      poster="${item.src.poster || ""}"
+      width="${item.width || 1920}" height="${item.height || 1080}">
       <source src="${item.src.small}" type="video/mp4" media="(max-width: 768px)">
-      <!-- Versión escritorio -->
-      <source src="${item.src.mp4}" type="video/mp4" media="(min-width: 769px)">
+      <source src="${item.src.mp4}"   type="video/mp4" media="(min-width: 769px)">
       Tu navegador no soporta el video.
     </video>
     
     <figcaption>${item.title}</figcaption>
   </figure>
 `;
+
           }
         })
         .join("");
     })
     .catch((err) => console.error("Error cargando galería:", err));
 }
+const lazyPlay = new IntersectionObserver((entries) => {
+  entries.forEach(({isIntersecting, target}) => {
+    if (isIntersecting) {
+      // fuerza al navegador a elegir la fuente y empezar a reproducir
+      if (target.readyState < 2) target.load();
+      if (!target.hasAttribute('autoplay')) target.setAttribute('autoplay','');
+      target.play().catch(()=>{});
+    } else {
+      target.pause();
+    }
+  });
+}, { rootMargin: "200px 0px" });
+
+document.querySelectorAll('#galeria-json video').forEach(v => lazyPlay.observe(v));
