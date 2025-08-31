@@ -12,8 +12,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <script type="module" crossorigin src="/maquetacionSTH/assets/index-DzcGj1JQ.js"></script>
-    <link rel="stylesheet" crossorigin href="/maquetacionSTH/assets/index-DehCezoT.css">
+    <script type="module" crossorigin src="/maquetacionSTH/assets/index-BZnhQZ5M.js"></script>
+    <link rel="stylesheet" crossorigin href="/maquetacionSTH/assets/index-BIwguD6I.css">
   </head>
   <body>
     <!-- #region header-nav -->
@@ -46,77 +46,52 @@
 
     <main>
       <!-- #region hero-slider -->
-      <section class="hero" id="hero" aria-label="Presentación principal">
-        <div class="slider" id="slider">
-          <div class="slide activo">
-            <video muted playsinline>
-              <source
-                src="/maquetacionSTH/videos/hero-slider/vp-2-small.mp4"
-                type="video/mp4"
-                media="(max-width: 479px)"
-              />
-              <source
-                src="/maquetacionSTH/videos/hero-slider/vp-2.mp4"
-                type="video/mp4"
-                media="(max-width: 768px)"
-              />
-              <source src="/maquetacionSTH/videos/hero-slider/vp-2.mp4" type="video/mp4" />
-            </video>
-            <div class="contenido-slide">
-              <h1>Disfruta</h1>
-              <p>Descubre experiencias únicas con nosotros</p>
-              <a href="#galeria" class="btn-hero">Ver más</a>
-            </div>
-          </div>
+   <section class="hero" id="hero" aria-label="Presentación de portada">
+  <div class="slider" id="slider">
+    
+    <div class="slide activo">
+      <picture>
+        <source srcset="/maquetacionSTH/img/hero-slider/vp-1-small.jpg" media="(max-width: 768px)">
+        <img src="/maquetacionSTH/img/hero-slider/vp-1.jpg" alt="Disfruta experiencias únicas" />
+      </picture>
+      <div class="contenido-slide">
+        <h1>Disfruta</h1>
+        <p>Descubre experiencias únicas con nosotros</p>
+        <a href="#galeria" class="btn-hero">Ver más</a>
+      </div>
+    </div>
 
-          <div class="slide">
-       <video muted playsinline>
-              <source
-                src="/maquetacionSTH/videos/hero-slider/vp-2-small.mp4"
-                type="video/mp4"
-                media="(max-width: 479px)"
-              />
-              <source
-                src="/maquetacionSTH/videos/hero-slider/vp-2.mp4"
-                type="video/mp4"
-                media="(max-width: 768px)"
-              />
-              <source src="/maquetacionSTH/videos/hero-slider/vp-2.mp4" type="video/mp4" />
-            </video>
-            <div class="contenido-slide">
-              <h1>Relájate</h1>
-              <p>Paz y bienestar para desconectar</p>
-              <a href="#galeria" class="btn-hero">Explorar</a>
-            </div>
-          </div>
+    <div class="slide">
+      <picture>
+        <source srcset="/maquetacionSTH/img/hero-slider/vp-2-small.jpg" media="(max-width: 768px)">
+        <img src="/maquetacionSTH/img/hero-slider/vp-2.jpg" alt="Relájate y desconecta" />
+      </picture>
+      <div class="contenido-slide">
+        <h1>Relájate</h1>
+        <p>Paz y bienestar para desconectar</p>
+        <a href="#galeria" class="btn-hero">Explorar</a>
+      </div>
+    </div>
 
-          <div class="slide">
-          <video muted playsinline>
-              <source
-                src="/maquetacionSTH/videos/hero-slider/vp-3-small.mp4"
-                type="video/mp4"
-                media="(max-width: 479px)"
-              /> 
-              <source
-                src="/maquetacionSTH/videos/hero-slider/vp-3.mp4"
-                type="video/mp4"
-                media="(max-width: 768px)"
-              />
-              <source src="/maquetacionSTH/videos/hero-slider/vp-3.mp4" type="video/mp4" />
-            </video>
-            <div class="contenido-slide">
-              <h1>Aventuras</h1>
-              <p>Excursiones y experiencias inolvidables</p>
-              <a href="#galeria" class="btn-hero">Empezar</a>
-            </div>
-          </div>
-        </div>
+    <div class="slide">
+      <picture>
+        <source srcset="/maquetacionSTH/img/hero-slider/vp-3-small.jpg" media="(max-width: 768px)">
+        <img src="/maquetacionSTH/img/hero-slider/vp-3.jpg" alt="Aventuras inolvidables" />
+      </picture>
+      <div class="contenido-slide">
+        <h1>Aventuras</h1>
+        <p>Excursiones y experiencias inolvidables</p>
+        <a href="#galeria" class="btn-hero">Empezar</a>
+      </div>
+    </div>
 
-        <button class="flecha izquierda" aria-label="Anterior">❮</button>
-        <button class="flecha derecha" aria-label="Siguiente">❯</button>
+  </div>
 
-        <div class="puntos" id="puntos" role="tablist"></div>
-      </section>
+  <button class="flecha izquierda" aria-label="Anterior">❮</button>
+  <button class="flecha derecha" aria-label="Siguiente">❯</button>
+  <div class="puntos" id="puntos" role="tablist"></div>
+</section>
+
       <!-- #endregion hero-slider -->
 
       <!-- #region galeria -->
