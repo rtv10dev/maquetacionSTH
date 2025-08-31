@@ -99,7 +99,7 @@
   {
     "id": 9,
     "title": "Experiencia",
-    "category": ["Experiencias", "Videos"],
+    "category": ["Experiencias"],
     "tags": ["mar", "buceo"],
     "src": { "type": "image", "jpg": "img/experiencia/experiencias (4).jpg", "small": "img/experiencia/experiencias (4)-small.jpg" },
     "width": 1920,
@@ -110,9 +110,9 @@
   {
     "id": 10,
     "title": "Experiencia",
-    "category": ["Experiencias", "Videos"],
+    "category": ["Experiencias"],
     "tags": ["globos", "panorama"],
-    "src": { "type": "image", "jpg": "videos/experiencia/experiencias (5).jpg", "small": "videos/experiencia/experiencias (5)-small.jpg" },
+    "src": { "type": "image", "jpg": "img/experiencia/experiencias (5).jpg", "small": "img/experiencia/experiencias (5)-small.jpg" },
     "width": 1920,
     "height": 1080,
     "views": 540,
