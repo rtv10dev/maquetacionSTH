@@ -19,7 +19,6 @@ export function cargarGaleria() {
                 <img 
                   src="${item.src.jpg}" 
                   srcset="${item.src.small} 600w, ${item.src.jpg} 1200w"
-                  sizes="(max-width: 768px) 100vw, 50vw"
                   alt="${item.title}" 
                   width="${item.width}" 
                   height="${item.height}" 
