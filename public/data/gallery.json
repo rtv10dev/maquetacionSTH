@@ -18,7 +18,7 @@
     "title": "Destino",
     "category": ["Destinos"],
     "tags": ["costa", "arena"],
-    "src": { "type": "image", "jpg": "img/destino/destinos(2).jpg", "small":"img/destino(2)-small.jpg" },
+    "src": { "type": "image", "jpg": "img/destino/destinos(2).jpg", "small":"img/destino/destinos(2)-small.jpg" },
     "width": 1600,
     "height": 1200,
     "views": 280,
